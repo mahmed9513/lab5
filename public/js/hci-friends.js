@@ -10,6 +10,15 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+	$(".friendnames").click(projectClick);
+}
+
+function projectClick(e) {
+    // prevent the page from reloading
+    e.preventDefault();
+    // In an event handler, $(this) refers to   
+    // the object that triggered the event   
+    $(this).text(anagrammedName);
 }
 
 function anagrammedName(name) {
